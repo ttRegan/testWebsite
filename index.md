@@ -10,18 +10,14 @@
 </html>
 
 <script>
-	name: 'testWebsite',
-	
-	data: () => ({
-		initial: null;
-		final: null;
-		investAmount: null;
-		submitted: false;
-		perIncrease: 0;
-		newAmount: 0;
-		earnings: 0;
-		earningsString: "";
-	})
+	var initial;
+	var final;
+	var investAmount;
+	var submitted = false;
+	var perIncrease = 0;
+	var newAmount = 0;
+	var earnings = 0;
+	var earningsString = "";
 	methods: {
 		calculate() {
 			this.submitted = true;
