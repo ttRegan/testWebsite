@@ -10,7 +10,7 @@
 </html>
 
 <script>
-	export default {
+	default {
 		name: 'testWebsite',
 		
 		data: () => ({
