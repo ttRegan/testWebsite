@@ -4,8 +4,8 @@
 		<p>Enter final crypto value:</p> <input type="number" name="final">
 		<p>Enter investment amount:</p> <input type="number" name="investAmount">
 		<button onClick="calculate()">Calculate</button>
-		<p id="show1" style="display:none;">Your current value would be: ${{newAmount}}</p>
-		<p id="show2" style="display:none;">{{earningsString}}</p>
+		<p id="show1" style="display:none;">Your current value would be: $<span id="earnings"></span></p>
+		<p id="show2" style="display:none;"><span id="earningsString"></span></p>
 	</body>
 </html>
 
@@ -29,6 +29,8 @@
 		} else {
 			this.earningsString = "You lost: $" + String(Math.abs(this.earnings));
 		}
+		document.getElementById('earnings').innerHTML = this.earnings;
+		document.getElementById('earningsString').innerHTML = this.earningsString;
 		document.getElementById('show1').style.display = "";
 		document.getElementById('show2').style.display = "";
 	}
