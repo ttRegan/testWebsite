@@ -22,7 +22,7 @@
 	var earningsString = "";
 	function calculate() {
 		this.submitted = true;
-		this.perIncrease = 100*((this.final-this.initial)/abs(this.initial));
+		this.perIncrease = 100*((this.final-this.initial)/Math.abs(this.initial));
 		this.newAmount = this.investAmount*this.perIncrease;
 		this.earnings = this.newAmount-this.investAmount;
 		if ((this.earnings) >= 0 ){
