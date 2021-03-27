@@ -6,8 +6,8 @@
 		<br/>
 		<button onClick="calculate()">Calculate</button>
 		<br/>
-		<div id="show1" style="display:none;">Your current value would be: $<span id="earnings"></span></div>
 		<br/>
+		<div id="show1" style="display:none;">Your current value would be: $<span id="newAmount"></span></div>
 		<div id="show2" style="display:none;"><span id="earningsString"></span></div>
 	</body>
 </html>
@@ -26,7 +26,6 @@
 		this.final = document.getElementById("final").value;
 		this.investAmount = document.getElementById("investAmount").value;
 		this.submitted = true;
-		console.log(this.submitted);
 		this.perIncrease = 100*((this.final-this.initial)/Math.abs(this.initial));
 		this.newAmount = this.investAmount*this.perIncrease;
 		this.earnings = this.newAmount-this.investAmount;
@@ -35,9 +34,7 @@
 		} else {
 			this.earningsString = "You lost: $" + String(Math.abs(this.earnings));
 		}
-		console.log(this.earnings);
-		console.log(this.earningsString);
-		document.getElementById('earnings').innerHTML = String(this.earnings);
+		document.getElementById('newAmount').innerHTML = String(this.newAmount);
 		document.getElementById('earningsString').innerHTML = this.earningsString;
 		document.getElementById('show1').style.display = "";
 		document.getElementById('show2').style.display = "";
