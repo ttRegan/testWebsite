@@ -1,15 +1,16 @@
-<body>
-	<form name="input">
-		Enter initial crypto value: <input type="number" name="initial">
+<html>
+	<body>
+		<p>Enter initial crypto value:</p> <input type="number" name="initial">
 		</br>
-		Enter final crypto value: <input type="number" name="final">
+		<p>Enter final crypto value:</p> <input type="number" name="final">
 		</br>
-		Enter investment amount: <input type="number" name="investAmount">
+		<p>Enter investment amount:</p> <input type="number" name="investAmount">
 		</br>
-	</form>
-	<p>Your current value would be: ${{newAmount}}</p>
-	<p>earningsString</p>
-</body>
+		<button onClick="calculate()">Calculate</button>
+		<p>Your current value would be: ${{newAmount}}</p>
+		<p>earningsString</p>
+	</body>
+</html>
 
 <script>
 	export default {
@@ -21,13 +22,17 @@
 			earnings: newAmount-investAmount;
 			earningsString: printEarnings;
 		})
+		methods: {
+			calculate() {
+				
+			}
+		}
 		computed: {
 			printEarnings: function() {
 				if (this.earnings) >= 0:
 					return ("You earnt: $" + String(this.earnings));
 				else: 
 					return ("You lost: $" + String(abs(this.earnings)));
-
 			}
 		}
 	}
