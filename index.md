@@ -20,7 +20,7 @@
 	var earningsString = "";
 	function calculate() {
 		this.submitted = true;
-		console.log(this.submitted)
+		console.log(this.submitted);
 		this.perIncrease = 100*((this.final-this.initial)/Math.abs(this.initial));
 		this.newAmount = this.investAmount*this.perIncrease;
 		this.earnings = this.newAmount-this.investAmount;
@@ -29,7 +29,9 @@
 		} else {
 			this.earningsString = "You lost: $" + String(Math.abs(this.earnings));
 		}
-		document.getElementById('earnings').innerHTML = this.earnings;
+		console.log(this.earnings);
+		console.log(this.earningsString);
+		document.getElementById('earnings').innerHTML = String(this.earnings);
 		document.getElementById('earningsString').innerHTML = this.earningsString;
 		document.getElementById('show1').style.display = "";
 		document.getElementById('show2').style.display = "";
