@@ -29,7 +29,7 @@
 		this.submitted = true;
 		this.perIncrease = ((this.final-this.initial)/Math.abs(this.initial));
 		this.increase = this.investAmount*this.perIncrease;
-		this.newAmount = float(this.investAmount)+float(this.increase);
+		this.newAmount = parseFloat(this.investAmount)+parseFloat(this.increase);
 		this.earnings = this.newAmount-this.investAmount;
 		console.log(this.perIncrease);
 		console.log(this.increase);
