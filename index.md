@@ -18,17 +18,15 @@
 	var newAmount = 0;
 	var earnings = 0;
 	var earningsString = "";
-	methods: {
-		calculate() {
-			this.submitted = true;
-			this.perIncrease = 100*((this.final-this.initial)/abs(this.initial));
-			this.newAmount = this.investAmount*this.perIncrease;
-			this.earnings: this.newAmount-this.investAmount;
-			if ((this.earnings) >= 0 ){
-				this.earningsString = "You earnt: $" + String(this.earnings);
-			} else {
-				this.earningsString = "You lost: $" + String(abs(this.earnings));
-			}
+	calculate : function() {
+		this.submitted = true;
+		this.perIncrease = 100*((this.final-this.initial)/abs(this.initial));
+		this.newAmount = this.investAmount*this.perIncrease;
+		this.earnings: this.newAmount-this.investAmount;
+		if ((this.earnings) >= 0 ){
+			this.earningsString = "You earnt: $" + String(this.earnings);
+		} else {
+			this.earningsString = "You lost: $" + String(abs(this.earnings));
 		}
 	}
 </script>
