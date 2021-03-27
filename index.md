@@ -1,13 +1,13 @@
 <html>
 	<body>
-		<p>Enter initial crypto value:</p> <input type="number" name="initial">
+		<div>Enter initial crypto value:</div> <input type="number" name="initial">
 		</br>
 		<p>Enter final crypto value:</p> <input type="number" name="final">
 		</br>
 		<p>Enter investment amount:</p> <input type="number" name="investAmount">
 		</br>
 		<button onClick="calculate()">Calculate</button>
-		{% if submitted == true %}
+		{% if {{submitted}} == true %}
 		<p>Your current value would be: ${{newAmount}}</p>
 		<p>{{earningsString}}</p>
 		{% endif %}
