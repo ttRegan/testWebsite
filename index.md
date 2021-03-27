@@ -18,6 +18,7 @@
 	var investAmount;
 	var submitted = false;
 	var perIncrease = 0;
+	var increase = 0;
 	var newAmount = 0;
 	var earnings = 0;
 	var earningsString = "";
