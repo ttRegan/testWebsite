@@ -31,6 +31,10 @@
 		this.increase = this.investAmount*this.perIncrease;
 		this.newAmount = this.investAmount + this.increase;
 		this.earnings = this.newAmount-this.investAmount;
+		console.log(this.perIncrease);
+		console.log(this.increase);
+		console.log(this.newAmount);
+		console.log(this.earnings);
 		if ((this.earnings) >= 0 ){
 			this.earningsString =  "You earnt: $" + String(this.earnings);
 		} else {
