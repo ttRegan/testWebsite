@@ -19,6 +19,9 @@
 	var earnings = 0;
 	var earningsString = "";
 	function calculate() {
+		this.initial = document.getElementById("initial").value;
+		this.final = document.getElementById("final").value;
+		this.investAmount = document.getElementById("investAmount").value;
 		this.submitted = true;
 		console.log(this.submitted);
 		this.perIncrease = 100*((this.final-this.initial)/Math.abs(this.initial));
