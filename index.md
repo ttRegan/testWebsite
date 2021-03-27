@@ -3,9 +3,11 @@
 		<div>Enter initial crypto value:</div> <input id="initial" type="number" name="initial">
 		<p>Enter final crypto value:</p> <input id="final" type="number" name="final">
 		<p>Enter investment amount:</p> <input id="investAmount" type="number" name="investAmount">
+		<br/>
 		<button onClick="calculate()">Calculate</button>
-		<p id="show1" style="display:none;">Your current value would be: $<span id="earnings"></span></p>
-		<p id="show2" style="display:none;"><span id="earningsString"></span></p>
+		<br/>
+		<h2 id="show1" style="display:none;">Your current value would be: $<span id="earnings"></span></h2>
+		<h2 id="show2" style="display:none;"><span id="earningsString"></span></h2>
 	</body>
 </html>
 
