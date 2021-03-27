@@ -4,8 +4,10 @@
 		<p>Enter final crypto value:</p> <input type="number" name="final">
 		<p>Enter investment amount:</p> <input type="number" name="investAmount">
 		<button onClick="calculate()">Calculate</button>
+		{% if {{submitted}} %}
 		<p>Your current value would be: ${{newAmount}}</p>
 		<p>{{earningsString}}</p>
+		{% endif %}
 	</body>
 </html>
 
@@ -17,15 +19,16 @@
 	var perIncrease = 0;
 	var newAmount = 0;
 	var earnings = 0;
-	var earningsString : function() {
+	var earningsString = "";
+	function calculate() {
 		this.submitted = true;
 		this.perIncrease = 100*((this.final-this.initial)/abs(this.initial));
 		this.newAmount = this.investAmount*this.perIncrease;
 		this.earnings: this.newAmount-this.investAmount;
 		if ((this.earnings) >= 0 ){
-			return "You earnt: $" + String(this.earnings);
+			this.earningsString =  "You earnt: $" + String(this.earnings);
 		} else {
-			return "You lost: $" + String(abs(this.earnings));
+			this.earningsString = "You lost: $" + String(abs(this.earnings));
 		}
 	}
 </script>
