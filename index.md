@@ -27,7 +27,8 @@
 		this.investAmount = document.getElementById("investAmount").value;
 		this.submitted = true;
 		this.perIncrease = ((this.final-this.initial)/Math.abs(this.initial));
-		this.newAmount = this.investAmount*this.perIncrease;
+		this.increase = this.investAmount*this.perIncrease;
+		this.newAmount = this.investAmount + this.increase;
 		this.earnings = this.newAmount-this.investAmount;
 		if ((this.earnings) >= 0 ){
 			this.earningsString =  "You earnt: $" + String(this.earnings);
