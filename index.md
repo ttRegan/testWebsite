@@ -28,7 +28,7 @@
 		if ((this.earnings) >= 0 ){
 			this.earningsString =  "You earnt: $" + String(this.earnings);
 		} else {
-			this.earningsString = "You lost: $" + String(abs(this.earnings));
+			this.earningsString = "You lost: $" + String(Math.abs(this.earnings));
 		}
 	}
 </script>
