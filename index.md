@@ -17,16 +17,15 @@
 	var perIncrease = 0;
 	var newAmount = 0;
 	var earnings = 0;
-	var earningsString = "";
-	calculate : function() {
+	var earningsString : function() {
 		this.submitted = true;
 		this.perIncrease = 100*((this.final-this.initial)/abs(this.initial));
 		this.newAmount = this.investAmount*this.perIncrease;
 		this.earnings: this.newAmount-this.investAmount;
 		if ((this.earnings) >= 0 ){
-			this.earningsString = "You earnt: $" + String(this.earnings);
+			return "You earnt: $" + String(this.earnings);
 		} else {
-			this.earningsString = "You lost: $" + String(abs(this.earnings));
+			return "You lost: $" + String(abs(this.earnings));
 		}
 	}
 </script>
