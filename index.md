@@ -26,7 +26,7 @@
 		this.final = document.getElementById("final").value;
 		this.investAmount = document.getElementById("investAmount").value;
 		this.submitted = true;
-		this.perIncrease = 100*((this.final-this.initial)/Math.abs(this.initial));
+		this.perIncrease = ((this.final-this.initial)/Math.abs(this.initial));
 		this.newAmount = this.investAmount*this.perIncrease;
 		this.earnings = this.newAmount-this.investAmount;
 		if ((this.earnings) >= 0 ){
